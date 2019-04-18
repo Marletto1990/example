@@ -1,0 +1,63 @@
+<mvc:View controllerName="my_amazingapptempest.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m"  xmlns:f="sap.ui.layout.form">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>Simple form}">
+				<content>
+					<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" >
+						<f:content>
+							<Panel >
+								<headerToolbar>
+									<Toolbar>
+										<Title level="H2" text="ТУТ БУДЕТ МЕНЮ"/>
+									</Toolbar>
+								</headerToolbar>
+								<FlexBox 
+										height="200px"
+										alignItems="Center"
+										justifyContent="Center">
+									<Label text="{/Form/0/firstname}" />
+									<Input value="{/Form/0/firstname}"/>
+									<Button text="set default"
+											press="onPress2"
+											type="Emphasized"
+											class="sapUiSmallMarginEnd"/>
+
+									<Input value="{/Form/0/firstname}"/>
+									<Button 
+											text="{/Form/0/test}"
+											press = "onPress"
+											type="Reject"/>
+								</FlexBox>
+									
+							</Panel>
+							<Panel expandable = "true" expanded="false" >
+								<headerToolbar>
+									<Toolbar>
+										<Title level="H2" text="ТУТ БУДЕТ МЕНЮ" />
+									</Toolbar>
+								</headerToolbar>
+								<FlexBox 
+										height="200px"
+										alignItems="Center"
+										justifyContent="Start">
+										<items>
+											<RadioButtonGroup columns = '1' valueState = "Warning">
+												<RadioButton text='First button'
+											 				 selected='true'/>
+												<RadioButton text='Second button'
+															 selected='true'/>	
+												<RadioButton text='Third button'
+															 select="onMenuSelect" />				 							
+											</RadioButtonGroup>
+										
+										</items>
+								</FlexBox>			
+							</Panel>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
